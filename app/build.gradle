@@ -1,0 +1,70 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.1"
+
+    defaultConfig {
+        applicationId "com.example.myapplication"
+        minSdkVersion 16
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.core:core-ktx:1.1.0'
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation files('libs\\cglib-nodep-3.2.4.jar')
+    implementation files('libs\\client-combined-3.4.0-nodeps.jar')
+    implementation files('libs\\commons-codec-1.10.jar')
+    implementation files('libs\\commons-exec-1.3.jar')
+    implementation files('libs\\commons-io-2.5.jar')
+    implementation files('libs\\commons-lang3-3.5.jar')
+    implementation files('libs\\commons-logging-1.2.jar')
+    implementation files('libs\\cssparser-0.9.22.jar')
+    implementation files('libs\\gson-2.8.0.jar')
+    implementation files('libs\\guava-21.0.jar')
+    implementation files('libs\\hamcrest-core-1.3.jar')
+    implementation files('libs\\htmlunit-2.26.jar')
+    implementation files('libs\\htmlunit-core-js-2.26.jar')
+    implementation files('libs\\htmlunit-driver-2.26.jar')
+    implementation files('libs\\httpclient-4.5.3.jar')
+    implementation files('libs\\httpcore-4.4.6.jar')
+    implementation files('libs\\httpmime-4.5.3.jar')
+    implementation files('libs\\java-client-5.0.0-BETA9.jar')
+    implementation files('libs\\javax.servlet-api-3.1.0.jar')
+    implementation files('libs\\jetty-io-9.4.1.v20170120.jar')
+    implementation files('libs\\jetty-util-9.4.1.v20170120.jar')
+    implementation files('libs\\jna-4.1.0.jar')
+    implementation files('libs\\jna-platform-4.1.0.jar')
+    implementation files('libs\\junit-4.12.jar')
+    implementation files('libs\\neko-htmlunit-2.25.jar')
+    implementation files('libs\\phantomjsdriver-1.4.0.jar')
+    implementation files('libs\\sac-1.3.jar')
+    implementation files('libs\\serializer-2.7.2.jar')
+    implementation files('libs\\websocket-api-9.4.3.v20170317.jar')
+    implementation files('libs\\websocket-client-9.4.3.v20170317.jar')
+    implementation files('libs\\websocket-common-9.4.3.v20170317.jar')
+    implementation files('libs\\xalan-2.7.2.jar')
+    implementation files('libs\\xercesImpl-2.11.0.jar')
+    implementation files('libs\\xml-apis-1.4.01.jar')
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+}
